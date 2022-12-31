@@ -116,7 +116,7 @@ const store = {
 	state: {
 		// will be unpaused in init()
 		paused: true,
-		soundEnabled: true,
+		soundEnabled: false,
 		menuOpen: false,
 		openHelpTopic: null,
 		fullscreen: isFullscreen(),
@@ -496,13 +496,13 @@ Object.keys(nodeKeyToHelpKey).forEach(nodeKey => {
 	});
 });
 
-appNodes.helpModalCloseBtn.addEventListener('click', () => {
-	store.setState({ openHelpTopic: null });
-});
-
-appNodes.helpModalOverlay.addEventListener('click', () => {
-	store.setState({ openHelpTopic: null });
-});
+// appNodes.helpModalCloseBtn.addEventListener('click', () => {
+// 	store.setState({ openHelpTopic: null });
+// });
+//
+// appNodes.helpModalOverlay.addEventListener('click', () => {
+// 	store.setState({ openHelpTopic: null });
+// });
 
 
 
